@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kyoto City</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+  <header>
+        <h1>CITY OF KYOTO</h1>
+  </header>
+  <ul>
+    <li><a href="contacts.html">CONTACTS</a></li>
+    <li><a href="events.html">EVENTS</a></li>
+    <li><a href="lifestyle.html">LIFESTYLE</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a class="active" href="index.html">HOME</a></li>
+  </ul>
+
+  <!-- MAIN (Center website) -->
+  <div class="main">
+
+    <h1>KYOTO TOURIST ATTRACTIONS</h1>
+    <hr>
+    <section>
+      <aside class="attraction">
+        <p>Kyoto is more relaxing. Tokyo is about 30% more expensive than Kyoto for travelers.
+          If you prefer big cities, modern technology, nightlife and a huge selection of restaurants,
+          Tokyo is for you. If you're after temples, shrines, garden, geisha and hiking, Kyoto is for
+          you.Kyoto is Japan in a nutshell. It's the cultural and historical heart of the country.
+          It's the best place in all Japan to experience traditional temples, shrines, gardens,
+          geisha, shops, restaurants and festivals</p>
+      </aside>
+    </section>
+
+    <h2>PORTFOLIO</h2>
+
+
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('temples')"> Temples</button>
+      <button class="btn" onclick="filterSelection('museums')"> Museums</button>
+
+    </div>
+
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+      <div class="column temples">
+        <div class="content">
+          <img src="Images/dera temple.jfif" alt="Temples" style="width:100%">
+          <h4>kiyomizo-dera temple</h4>
+          <p>Kiyomizu-dera, otherwise known as the 'Temple of the Pure Water Spring', is a Buddhist temple in Kyoto,
+            Japan.
+            The site is famous for its impressive viewing platform.</p>
+        </div>
+      </div>
+      <div class="column temples">
+        <div class="content">
+          <img src="Images/Nishi Honganji temple.jfif" alt="Temples" style="width:100%">
+          <h4>Nishi Honganji temple</h4>
+          <p>It has lovely buildings of historical and architectural significance. It is one of two head temples of the
+            Jodo Shinshu sect of Buddhism in Kyoto</p>
+        </div>
+      </div>
+
+      <div class="column temples">
+        <div class="content">
+          <img src="Images/Sanjusangen-do temple.jfif" alt="Temples" style="width:100%">
+          <h4>Sanjusangen-do temple</h4>
+          <p>The Buddhist goddess of leniency, Sanjusangen-do Temple is one the most capturing sights in Kyoto.
+            It's similar to a radiant earthenware armed force.</p>
+        </div>
+
+      </div>
+      <div class="column museums">
+        <div class="content">
+          <img src="Images/museum.kyoto.jfif" alt="museums" style="width:100%">
+          <h4>Kyoto National museum and municipal museum of art</h4>
+          <p>The Kyoto National Museum is the best museum in Kyoto. The permanent collection is mediocre and
+            indifferently
+            displayed</p>
+        </div>
+      </div>
+
+      <div class="column museums">
+        <div class="content">
+          <img src="Images/katsura-rikyu-imperial-villa-.jpg" alt="museums" style="width:100%">
+          <h4>Katsura Imperial villa</h4>
+          <p>Located in a suburb about 4.5km west of Kyoto Station, Katsura Rikyu Imperial Villa is regarded as the
+            pinnacle of Japanese architecture and garden design.</p>
+        </div>
+      </div>
+      <div class="column museums">
+        <div class="content">
+          <img src="Images/palace.jfif" alt="museums" style="width:100%">
+          <h4>Kyoto Imperial palace</h4>
+          <p>Kyoto’s Imperial Palace (known as Gosho in Japanese) is the Emperor’s official residence in Kyoto.
+            The structures, though modern reconstructions, are lovely.</p>
+        </div>
+      </div>
+      <hr>
+      <section class="persuation">
+        <article>
+          <p>The best times to visit Kyoto are from March to May and from September to November when the weather
+            is the mildest. However, the blooming cherry blossoms in spring and the vibrant fall foliage are big
+            tourist draws, so be prepared for higher hotel rates and fewer vacancies.</p>
+        </article>
+      </section>
+
+
+
+
+      <!-- END GRID -->
+    </div>
+
+    <!-- END MAIN -->
+  </div>
+
+  <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+      }
+    }
+
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  </script>
+  <footer class="footer" style=";text-align: center;padding:5%;">
+    <section class="social">
+      <a href="https://facebook.com" class="fa fa-facebook"></a>
+      <a href="https://twitter.com" class="fa fa-twitter"></a>
+      <a href="https://instagram.com" class="fa fa-instagram"></a>
+      <a href="https://google.com" class="fa fa-google"></a>
+      <div>
+        <div class="footer" style="color: black;">
+          <p>DESIGNED BY KAYANG</p>
+        </div>
+      </div>
+    </footer>
+
+  </section>
+
+
+
+
+
+</body>
+
+</html>

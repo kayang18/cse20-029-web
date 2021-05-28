@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kyoto City</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <h1>CITY OF KYOTO</h1>
+       
+  </header>
+  <ul>
+    <li><a href="contacts.html">CONTACTS</a></li>
+    <li><a href="events.html">EVENTS</a></li>
+    <li><a href="lifestyle.html">LIFESTYLE</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a class="active" href="index.html">HOME</a></li>
+  </ul>
+  <section>
+    <article class="eventsintro"></article>
+    <p>The Kyoto year is packed with interesting festivals and events,throughout the year.There is never a dull moment
+      here.In addition to the annual events to be listed here,there two monthly flea markets held in Kyoto: the Kobo-san
+      Market held on the 21st of every month at To-ji Temple and the Tenjin-san Market held on the 25th of every month
+      at Kitano-Tenmangu Shrine.</p>
+  </section>
+  <section>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="Images/yu-k2dtzyeL6J4-unsplash.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="Images/sorasak-_UIN-pFfJ7c-unsplash.jpg" style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="Images/nicolas-briot-cUyi1fChNHA-unsplash.jpg" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </section>
+  <main>
+    <div>
+      <hr>
+      <div class="cards" style="border-radius: 10px; color: white; display: inline-block; background-color: rgb(29, 23, 2); padding-left: 10px;  padding-right: 10px; width: 333.3px;margin-right: 8%;;">
+        <h6>Hatsumode (First Shrine Visit of the New Year)</h6>
+          <p>On New Year's Eve, and on the initial three days of the New Year (1, 2 and 3
+            January), Kyotoites visit either
+            their nearby area hallowed place or one of Kyoto's significant sanctuaries to pay for karma, achievement and
+            wellbeing in the New Year.</p>
+       </div>
+      <div class="cards" style="border-radius: 10px; color:white; display: inline-block; background-color: rgb(37, 29, 2); padding-left: 10px;  padding-right: 10px; width: 333.3px;margin-right:8%;">
+      <h6>Toka Ebisu</h6>
+      <p>This is one of our favorite Kyoto festivals. It’s held at Ebisu-jinja Shrine, which is a short walk from either
+        Gion-Shijo or Kiyomizu-Gojo Stations on the Keihan Line. It happens all day from the 8th to the 12th, but it’s
+        best to go in the evenings</p>
+        </div>
+        <div class="cards" style="border-radius: 10px; color:white; display: inline-block; background-color: rgb(43, 34, 3); padding-left: 10px;  padding-right: 10px; width: 333.3px;">      
+        <h6>Setsubun</h6>
+      <p>Setsubun marks the start of spring as indicated by the old lunar schedule in Japan. Since it denotes a fresh
+        start, it's the chance to standing off old terrible things and welcome in great new things.
+      </p>
+      </div>
+      <div class="cards" style="border-radius: 10px; color:white; display: inline-block; background-color: rgb(53, 42, 1); padding-left: 10px;  padding-right: 10px; width: 320px;margin-right: 10%;">
+      <h6>Higashiyama Hanatoro </h6>
+      <p>Higashiyama's Hanatoro is one of the cooler occasions of the Kyoto year. It's held in the Southern
+        Higashiyama
+        touring locale. Lamps are set along the paths and streets of the space,The impact is totally supernatural.</p>
+        </div>
+      <div class="cards" style="border-radius: 10px; color:white; display: inline-block; background-color: rgb(61, 48, 2); padding-left: 10px;  padding-right: 10px; width: 333.3px;">
+      <h6> Kamogawa Odori Geisha Dance</h6>
+      <p>During most of the month of May, the girls of the Pontocho geisha district perform the lovely and quaint
+        Kamogawa Odori dance in the Pontocho Kaburenjo hall, overlooking the eponymous Kamo-gawa River.</p>
+        </div>
+      <div class="cards" style="border-radius: 10px; color:white; display: inline-block; background-color: rgb(78, 62, 3); padding-left: 10px;  padding-right: 10px; width: 333.3px;margin-right: 8%;">
+        <h6>Gozan no Okuribi (Daimonji Fire Festival)</h6>
+      <p>This is the highlight of the month of August. More commonly known as the “Daimonji Fire Festival,” this is when
+        they set those massive Chinese characters on the hills around town ablaze.</p>
+        </div>
+       <div class="cards" style="border-radius: 10px; color:white; display: inline-block; background-color: rgb(54, 43, 4); padding-left: 10px;  padding-right: 10px; width: 333.3px;margin-right: 8%;">
+        <h6>Jidai Matsuri</h6>
+      <p>October 22nd is probably the greatest days of the year for Kyoto celebrations: In the daytime, you can get this
+        occasion, and afterward head north in the evening to look at the Kurama-no-himatsuri.The Jidai
+        Matsuri, which signifies "Celebration of the Ages", includes a motorcade of individuals wearing outfits from
+        every one of the significant Japanese authentic periods. .</p>
+        </div>
+      <div class="cards" style="border-radius: 10px; color:white; display: inline-block; background-color: rgb(54, 43, 4); padding-left: 10px;  padding-right: 10px; width: 333.3px;margin-right: 8%;"> 
+           <h6> Fire Festival</h6>
+      <p>This is arguably the most exciting festival of the year in Kyoto. It’s held in the village of Kurama, about 30
+        minutes by train from Kyoto. Teams of shouting men carry huge flaming torches through the narrow streets of this
+        tiny mountain village. The atmosphere is positively primeval. .</p>
+        </div>
+     <div class="cards" style="border-radius: 10px; color:white; display: inline-block; background-color: rgb(54, 43, 4); padding-left: 10px;  padding-right: 10px; width: 333.3px;margin-right: 8%;">
+        <h6>Higashiyama Temple Illuminations</h6>
+      <p>For all of November, to coincide with the fall foliage, one or more of the major temples in the Southern
+        Higashiyama District hold special evening temple illuminations, in which the buildings and gardens are
+        illuminated. </p>
+        </div>
+      <div class="cards" style="border-radius: 10px; color:white; display: inline-block; background-color: rgb(54, 43, 4); padding-left: 10px;  padding-right: 10px; width: 333.3px;margin-right: 6%;">
+        <h6> Arashiyama Hanatoro</h6>
+      <p>This is a magical event: thousands of lanterns are placed along the lanes of Arashiyama, including the walkway
+        through the famed Arashiyama Bamboo Grove. The effect is otherworldly. And you’ll find beautiful ikebana (flower
+        arrangement) installations scattered about. If you’re in town, don’t miss it!.</p>
+        </div>
+      <div class="cards" style="border-radius: 10px; color:white; display: inline-block; background-color: rgb(54, 43, 4); padding-left: 10px;  padding-right: 10px; width: 333.3px;margin-right: 6%;">
+      <h6>Joya-no-Kane</h6>
+      <p>In the wake of devouring New Year's Eve, numerous Kyotoites head to their neighborhood sanctuary to perform
+        joya-no-kane, a hallowed ringer ringing function. Here, individuals line up to ring the monster sanctuary chimes
+        and wish for favorable luck in the New Year (and to dispose of awful karma from the old). </p>
+        </div>
+      <div class="cards" style="border-radius: 10px; color:white; display: inline-block; background-color: rgb(54, 43, 4); padding-left: 10px;  padding-right: 10px; width: 333.3px;margin-right: 6%;">
+        <h6>Hatsumode (First Shrine Visit of the New Year) </h6>
+      <p>On New Year's Eve, and on the initial three days of the New Year (1, 2 and 3 January), Kyotoites visit either
+        their nearby area hallowed place or one of Kyoto's significant sanctuaries to pay for karma, achievement and
+        wellbeing in the New Year. Guests to Kyoto are very free to join. Simply be prepared for swarms!.</p>
+        </div>
+
+    </div>
+  </main>
+
+
+  <footer class="footer" style="color:black;text-align: center;padding:5%;">
+    <section class="social">
+      <a href="https://facebook.com" class="fa fa-facebook"></a>
+      <a href="https://twitter.com" class="fa fa-twitter"></a>
+      <a href="https://instagram.com" class="fa fa-instagram"></a>
+      <a href="https://google.com" class="fa fa-google"></a>
+      <div>
+        <div class="footer">
+          <p>DESIGNED BY KAYANG</p>
+        </div>
+      </div>
+    </footer>
+
+  </section>
+
+
+  </section>
+</body>
+
+</html>
